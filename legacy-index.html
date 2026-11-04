@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Tushar Chand Gupta | Hardware Systems & Silicon Architect</title>
+  <meta name="title" content="Tushar Chand Gupta | Hardware Systems & Silicon Architect" />
+  <meta name="description" content="Portfolio of Tushar Chand Gupta — Hardware Engineer specializing in high-speed digital PCB design, FPGA carriers, GaN power electronics, mixed-signal RF, and embedded systems." />
+  <meta name="keywords" content="Hardware Engineer, PCB Design, Altium Designer, High Speed Digital, FPGA, Embedded Systems, Silicon, GaN, Signal Integrity, Tushar Chand Gupta" />
+  <meta name="author" content="Tushar Chand Gupta" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tusharchandgupta.com/" />
+  <meta property="og:title" content="Tushar Chand Gupta | Hardware Systems & Silicon Architect" />
+  <meta property="og:description" content="Explore high-speed PCB designs, FPGA accelerators, power electronics, and interactive hardware engineering tools." />
+  <meta property="og:image" content="assets/images/hero-pcb.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://tusharchandgupta.com/" />
+  <meta property="twitter:title" content="Tushar Chand Gupta | Hardware Systems & Silicon Architect" />
+  <meta property="twitter:description" content="Explore high-speed PCB designs, FPGA accelerators, power electronics, and interactive hardware engineering tools." />
+  <meta property="twitter:image" content="assets/images/hero-pcb.jpg" />
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Background Canvas & Grid Overlay -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <canvas id="circuitCanvas" class="circuit-canvas" aria-hidden="true"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="header-nav" id="mainHeader">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" id="brandLogo" aria-label="Tushar Chand Gupta Home">
+        <div class="brand-chip" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 2v4H2v2h4v8H2v2h4v4h2v-4h8v4h2v-4h4v-2h-4V8h4V6h-4V2h-2v4H8V2H6zm2 6h8v8H8V8z" />
+          </svg>
+        </div>
+        <span>Tushar Chand Gupta</span>
+        <span class="brand-tag">HW_ENG</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#lab" class="nav-link">Virtual Lab</a></li>
+          <li><a href="#projects" class="nav-link">Hardware Projects</a></li>
+          <li><a href="#tools" class="nav-link">CAD & Stackup</a></li>
+          <li><a href="#toolchain" class="nav-link">Lab Equipment</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Connect</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="nav-telemetry-badge" id="telemetryBadge" title="Lab Bench Status">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span>BENCH ONLINE</span>
+        </div>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-telemetry-strip" id="heroTelemetry">
+            <span>● STATUS:</span>
+            <span class="highlight">ACTIVE REVISION 2.4</span>
+            <span>// 14-LAYER ENIG // DDR4 3200 MT/s</span>
+          </div>
+
+          <h1 class="hero-title">
+            Architecting <span class="gradient-text">High-Speed Silicon</span> & <span class="gold-text">Precision Hardware</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            I am a Hardware Systems & PCB Design Engineer dedicated to engineering complex silicon carrier boards, GaN power inverters, and high-frequency mixed-signal instruments from schematic capture and 3D SI/PI simulation to physical bring-up.
+          </p>
+
+          <div class="hero-meta-badges" aria-label="Core Engineering Disciplines">
+            <span class="chip-tag">⚡ Altium Designer 24</span>
+            <span class="chip-tag">⚡ 28Gbps SerDes</span>
+            <span class="chip-tag">⚡ GaN Power FETs</span>
+            <span class="chip-tag">⚡ PCIe Gen4 x16</span>
+            <span class="chip-tag gold">★ ANSYS HFSS & SIwave</span>
+            <span class="chip-tag">⚡ STM32 & Cortex-M7</span>
+            <span class="chip-tag">⚡ DDR4 / DDR5 Fly-by</span>
+            <span class="chip-tag gold">★ IPC-CID Certified</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" id="btnHeroProjects">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+              <span>Explore Hardware Projects</span>
+            </a>
+            <a href="#lab" class="btn btn-secondary" id="btnHeroLab">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+              <span>Launch Virtual Scope</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="btnHeroContact">
+              <span>Terminal & Resume</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Hardware Card with Interactive Test Points -->
+        <div class="hero-hardware-card" id="heroHwCard">
+          <div class="hardware-card-header">
+            <div class="hardware-spec-id">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="6" />
+              </svg>
+              <span>DUT: X100-PROTOTYPE-V2</span>
+            </div>
+            <div class="hardware-rev">REV B.2 // PASS</div>
+          </div>
+
+          <div class="hardware-img-container">
+            <img src="assets/images/hero-pcb.jpg" alt="Macro photograph of high-speed matte black PCB with gold contacts and STM32 microcontroller" width="600" height="375" />
+
+            <!-- Interactive Test Points -->
+            <div class="test-point-node tp-1" data-tp="TP1" aria-label="Test Point 1 Core Voltage">
+              <div class="tp-tooltip">
+                <strong>TP1: VCC_CORE</strong><br />
+                <span class="metric">1.050 V ± 0.8%</span> | 25A Load
+              </div>
+            </div>
+
+            <div class="test-point-node tp-2" data-tp="TP2" aria-label="Test Point 2 DDR4 Clock">
+              <div class="tp-tooltip">
+                <strong>TP2: DDR4_CLK_P/N</strong><br />
+                <span class="metric">1200.0 MHz</span> | Diff 100Ω
+              </div>
+            </div>
+
+            <div class="test-point-node tp-3" data-tp="TP3" aria-label="Test Point 3 High-Speed SerDes">
+              <div class="tp-tooltip">
+                <strong>TP3: SERDES_RX0</strong><br />
+                <span class="metric">28.125 Gbps</span> | PAM4 Eye Open
+              </div>
+            </div>
+
+            <div class="test-point-node tp-4" data-tp="TP4" aria-label="Test Point 4 CAN-FD Bus">
+              <div class="tp-tooltip">
+                <strong>TP4: CAN_FD_BUS</strong><br />
+                <span class="metric">5.0 Mbps</span> | ISO 11898-2
+              </div>
+            </div>
+          </div>
+
+          <div class="hardware-card-footer">
+            <div class="card-stat-item">
+              <div class="card-stat-label">Stackup</div>
+              <div class="card-stat-value">12-Layer ENIG</div>
+            </div>
+            <div class="card-stat-item">
+              <div class="card-stat-label">Min Width / Space</div>
+              <div class="card-stat-value">3.5 / 3.5 mil</div>
+            </div>
+            <div class="card-stat-item">
+              <div class="card-stat-label">Impedance</div>
+              <div class="card-stat-value">50Ω / 100Ω</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Digital Oscilloscope Lab -->
+    <section class="lab-section" id="lab">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Bench Instrument</span>
+          <h2 class="section-title">Virtual Digital Storage Oscilloscope</h2>
+          <p class="section-desc">
+            Interact with live synthesized board signals in real-time. Test signal waveforms, adjust horizontal timebases, vertical volts-per-division, and inject clock jitter.
+          </p>
+        </div>
+
+        <div class="oscilloscope-chassis" id="oscilloscopeChassis">
+          <div class="scope-bezel-header">
+            <div class="scope-model">
+              <span class="scope-led" aria-hidden="true"></span>
+              <span>TEK-RIGOL HYBRID 4-CHANNEL 1GHz DSO</span>
+            </div>
+            <div class="scope-status-text">
+              <span id="scopeRunState" style="color: var(--pcb-green); font-weight: 600;">TRIG’D [AUTO]</span> | 5.00 GSa/s | 10M pts
+            </div>
+          </div>
+
+          <div class="scope-grid-layout">
+            <!-- Screen Area -->
+            <div class="scope-screen-wrapper">
+              <div class="scope-onscreen-telemetry">
+                <span id="telemetryVpp">Vpp: 3.30 V</span>
+                <span id="telemetryVrms">Vrms: 1.16 V</span>
+                <span id="telemetryFreq">F: 12.50 MHz</span>
+                <span id="telemetryDuty">Duty: 50.0%</span>
+              </div>
+
+              <canvas id="oscilloscopeCanvas" aria-label="Interactive Oscilloscope Waveform Display"></canvas>
+
+              <div class="scope-onscreen-bottom">
+                <span>CH1: 1.00 V/div (1MΩ)</span>
+                <span>TIME: 20 ns/div</span>
+                <span>TRIG: CH1 1.25V</span>
+              </div>
+            </div>
+
+            <!-- Controls Panel -->
+            <div class="scope-controls-panel">
+              <div class="control-group">
+                <div class="control-group-title">Signal Source Channel</div>
+                <div class="signal-selector-pills">
+                  <button class="sig-btn active" data-signal="sine" id="sigBtnSine">Sine Clock</button>
+                  <button class="sig-btn" data-signal="pwm" id="sigBtnPwm">GaN PWM</button>
+                  <button class="sig-btn" data-signal="spi" id="sigBtnSpi">SPI Packet</button>
+                  <button class="sig-btn" data-signal="can" id="sigBtnCan">CAN-FD Frame</button>
+                </div>
+              </div>
+
+              <div class="slider-control-item">
+                <div class="slider-header">
+                  <span class="label">Clock Frequency</span>
+                  <span class="val" id="scopeFreqVal">12.5 MHz</span>
+                </div>
+                <input type="range" id="scopeFreq" min="1" max="40" step="0.5" value="12.5" aria-label="Scope Frequency" />
+              </div>
+
+              <div class="slider-control-item">
+                <div class="slider-header">
+                  <span class="label">Vertical Volts / Div</span>
+                  <span class="val" id="scopeVDivVal">1.0 V/div</span>
+                </div>
+                <input type="range" id="scopeVDiv" min="0.5" max="3.0" step="0.25" value="1.0" aria-label="Scope Volts per division" />
+              </div>
+
+              <div class="slider-control-item">
+                <div class="slider-header">
+                  <span class="label">Thermal Noise & Jitter</span>
+                  <span class="val" id="scopeNoiseVal">5%</span>
+                </div>
+                <input type="range" id="scopeNoise" min="0" max="0.3" step="0.02" value="0.05" aria-label="Thermal noise injection" />
+              </div>
+
+              <div class="scope-action-buttons">
+                <button class="scope-cmd-btn freeze-btn" id="scopeFreezeBtn">⏸ STOP</button>
+                <button class="scope-cmd-btn" id="scopeTriggerBtn">⟳ RE-ARM TRIG</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Hardware Projects -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Engineered Hardware Portfolio</span>
+          <h2 class="section-title">Featured Board Designs & Silicon Carriers</h2>
+          <p class="section-desc">
+            Production-grade multi-layer PCBs, high-efficiency motor controllers, and telemetry units built to withstand rigorous thermal, vibration, and EMI environments.
+          </p>
+        </div>
+
+        <div class="project-filter-tabs">
+          <button class="filter-tab active" data-filter="all">All Projects (4)</button>
+          <button class="filter-tab" data-filter="high-speed">High-Speed & FPGA</button>
+          <button class="filter-tab" data-filter="power">Power & GaN Electronics</button>
+          <button class="filter-tab" data-filter="embedded">Embedded IoT & Mixed-Signal</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project 1: FPGA Carrier -->
+          <article class="project-card" data-category="high-speed">
+            <div class="project-thumb-box">
+              <span class="project-category-pill">High-Speed Digital & FPGA</span>
+              <img src="assets/images/project-fpga.jpg" alt="Kintex UltraScale+ FPGA accelerator PCIe card" width="580" height="326" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <div class="project-header-row">
+                <h3 class="project-title">UltraCompute X100: Kintex UltraScale+ FPGA Carrier</h3>
+              </div>
+              <p class="project-desc">
+                14-Layer PCIe Gen4 accelerator card with 4x 28Gbps QSFP28 cages and DDR4-3200 memory bus. Engineered for high-throughput algorithmic processing with strict length-matching.
+              </p>
+              <div class="project-specs-list">
+                <div class="spec-item"><span class="spec-k">Substrate</span><span class="spec-v">14-Layer Megtron-6</span></div>
+                <div class="spec-item"><span class="spec-k">Interface</span><span class="spec-v">PCIe Gen4 x16 / QSFP28</span></div>
+                <div class="spec-item"><span class="spec-k">Power Rail</span><span class="spec-v">0.85V @ 60A Core Rail</span></div>
+                <div class="spec-item"><span class="spec-k">Impedance</span><span class="spec-v">85Ω / 100Ω Diff Pairs</span></div>
+              </div>
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="tag-mini">Altium</span>
+                  <span class="tag-mini">ANSYS HFSS</span>
+                  <span class="tag-mini">DDR4 Fly-By</span>
+                </div>
+                <button class="btn-open-modal" data-project="fpga">
+                  <span>View Hardware Deep Dive</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: GaN Power Inverter -->
+          <article class="project-card" data-category="power">
+            <div class="project-thumb-box">
+              <span class="project-category-pill">Power Electronics & GaN</span>
+              <img src="assets/images/project-gan.jpg" alt="GaN power electronics inverter motor driver bench test setup" width="580" height="326" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <div class="project-header-row">
+                <h3 class="project-title">GaN-Drive: 48V/60A Brushless Servo Inverter</h3>
+              </div>
+              <p class="project-desc">
+                High-power-density 3-phase motor driver featuring GaN Systems E-HEMTs switching at 200kHz. Optimized for low parasitic commutation loops and high efficiency (> 98.4%).
+              </p>
+              <div class="project-specs-list">
+                <div class="spec-item"><span class="spec-k">Copper Weight</span><span class="spec-v">4-Layer 3oz Heavy Copper</span></div>
+                <div class="spec-item"><span class="spec-k">Power Rating</span><span class="spec-v">48V DC, 60A Cont. (3kW)</span></div>
+                <div class="spec-item"><span class="spec-k">Switching Freq</span><span class="spec-v">200 kHz GaN PWM</span></div>
+                <div class="spec-item"><span class="spec-k">Telemetry</span><span class="spec-v">CAN-FD 5Mbps / STM32G4</span></div>
+              </div>
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="tag-mini">GaN FETs</span>
+                  <span class="tag-mini">Kelvin Sense</span>
+                  <span class="tag-mini">STM32G4</span>
+                </div>
+                <button class="btn-open-modal" data-project="power">
+                  <span>View Hardware Deep Dive</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Industrial IoT Gateway -->
+          <article class="project-card" data-category="embedded">
+            <div class="project-thumb-box">
+              <span class="project-category-pill">Embedded IoT & Wireless</span>
+              <img src="assets/images/project-iot.jpg" alt="Industrial IoT embedded sensor gateway PCB with STM32 and nRF52" width="580" height="326" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <div class="project-header-row">
+                <h3 class="project-title">Precision Industrial Edge IoT Gateway</h3>
+              </div>
+              <p class="project-desc">
+                Ultra-low-power environmental and acoustic sensor hub with dual-core nRF52840 BLE 5.3 + Semtech SX1262 LoRaWAN. Engineered for 5-year battery operation in remote nodes.
+              </p>
+              <div class="project-specs-list">
+                <div class="spec-item"><span class="spec-k">Stackup</span><span class="spec-v">6-Layer ENIG FR-4</span></div>
+                <div class="spec-item"><span class="spec-k">ADC Front-End</span><span class="spec-v">24-Bit 192kSPS Delta-Sigma</span></div>
+                <div class="spec-item"><span class="spec-k">Sleep Current</span><span class="spec-v">&lt; 14 µA Deep Sleep</span></div>
+                <div class="spec-item"><span class="spec-k">RF Return Loss</span><span class="spec-v">S11 &lt; -22 dB @ 868MHz</span></div>
+              </div>
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="tag-mini">nRF52840</span>
+                  <span class="tag-mini">LoRaWAN</span>
+                  <span class="tag-mini">Energy Harvest</span>
+                </div>
+                <button class="btn-open-modal" data-project="iot">
+                  <span>View Hardware Deep Dive</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Femtoampere Instrumentation -->
+          <article class="project-card" data-category="embedded">
+            <div class="project-thumb-box">
+              <span class="project-category-pill">Mixed-Signal & RF</span>
+              <img src="assets/images/hero-pcb.jpg" alt="Low noise precision electrometer front-end PCB" width="580" height="326" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <div class="project-header-row">
+                <h3 class="project-title">Low-Noise Electrometer Front-End</h3>
+              </div>
+              <p class="project-desc">
+                High-impedance transimpedance amplifier capable of measuring sub-picoampere ionization currents. Features driven guard rings, PTFE substrate, and Faraday cage enclosure.
+              </p>
+              <div class="project-specs-list">
+                <div class="spec-item"><span class="spec-k">Substrate</span><span class="spec-v">Rogers RO4003C RF</span></div>
+                <div class="spec-item"><span class="spec-k">Current Range</span><span class="spec-v">10 fA to 10 µA</span></div>
+                <div class="spec-item"><span class="spec-k">Input Leakage</span><span class="spec-v">&lt; 20 fA @ 25°C</span></div>
+                <div class="spec-item"><span class="spec-k">Shielding</span><span class="spec-v">Active Guard + Milled Can</span></div>
+              </div>
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="tag-mini">Rogers RF</span>
+                  <span class="tag-mini">Femtoamp TIA</span>
+                  <span class="tag-mini">Guard Rings</span>
+                </div>
+                <button class="btn-open-modal" data-project="instrumentation">
+                  <span>View Hardware Deep Dive</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Hardware Tools: Stackup & Calculator -->
+    <section class="tools-section" id="tools">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CAD Tools & Engineering Utilities</span>
+          <h2 class="section-title">PCB Stackup & Microstrip Calculator</h2>
+          <p class="section-desc">
+            Explore 12-layer stackup dielectric properties and calculate controlled trace impedance using IPC standards directly in your browser.
+          </p>
+        </div>
+
+        <div class="tools-layout">
+          <!-- Tool 1: Interactive Stackup Explorer -->
+          <div class="tool-card">
+            <span class="tool-badge">STACKUP EXPLORER</span>
+            <h3 class="tool-title">12-Layer High-Speed Cross Section</h3>
+            <p class="tool-desc">Hover over any layer in the stackup below to inspect copper weight, dielectric material, and impedance return path roles.</p>
+
+            <div class="stackup-visualizer" id="stackupVisualizer">
+              <div class="pcb-layer-row layer-copper-top" data-layer="1">
+                <span>L1: Top Copper (Signal & RF)</span>
+                <span>1 oz (35µm) + ENIG</span>
+              </div>
+              <div class="pcb-layer-row layer-prepreg" data-layer="2">
+                <span>Dielectric: Prepreg 1080 (Megtron-6)</span>
+                <span>0.100 mm (Dk 3.65)</span>
+              </div>
+              <div class="pcb-layer-row layer-plane-gnd" data-layer="3">
+                <span>L2: Ground Plane (GND Ref 1)</span>
+                <span>1 oz Solid Pour</span>
+              </div>
+              <div class="pcb-layer-row layer-core" data-layer="4">
+                <span>Dielectric: Core FR-4 Substrate</span>
+                <span>0.200 mm</span>
+              </div>
+              <div class="pcb-layer-row layer-plane-pwr" data-layer="5">
+                <span>L3: Power Plane (VDD_CORE Split)</span>
+                <span>1 oz Copper</span>
+              </div>
+              <div class="pcb-layer-row layer-copper-bottom" data-layer="6">
+                <span>L4: Bottom Copper (Routing / Caps)</span>
+                <span>1 oz (35µm) + ENIG</span>
+              </div>
+            </div>
+
+            <!-- Dynamic Detail Inspector Box -->
+            <div class="stackup-layer-detail-box" id="stackupDetailBox">
+              <div class="detail-line"><span class="label">Selected Layer:</span><span class="val" id="layerDetailName">L1: Top Copper (Signal & RF)</span></div>
+              <div class="detail-line"><span class="label">Thickness:</span><span class="val" id="layerDetailThickness">0.043 mm (1 oz + Plating)</span></div>
+              <div class="detail-line"><span class="label">Function:</span><span class="val" id="layerDetailType">High-Speed Signal & RF Microstrip</span></div>
+              <div class="detail-line"><span class="label">Material:</span><span class="val" id="layerDetailMat">Electrodeposited Copper / ENIG Gold</span></div>
+              <div class="detail-line"><span class="label">Design Notes:</span><span class="val" id="layerDetailNotes">Controlled 50Ω single-ended & 100Ω differential pairs. Low-loss copper foil.</span></div>
+            </div>
+          </div>
+
+          <!-- Tool 2: IPC Microstrip Impedance & Trace Current Calculator -->
+          <div class="tool-card">
+            <span class="tool-badge">IPC-2141 / IPC-2221 UTILITY</span>
+            <h3 class="tool-title">Microstrip Impedance & Current Calc</h3>
+            <p class="tool-desc">Computes characteristic impedance $Z_0$, propagation delay $t_{pd}$, and maximum current capacity for 10°C temperature rise.</p>
+
+            <div class="calc-grid">
+              <div class="calc-input-group">
+                <label class="calc-label" for="calcTraceWidth">Trace Width (mils)</label>
+                <input type="number" id="calcTraceWidth" class="calc-input" value="10" min="1" max="100" step="0.5" />
+              </div>
+              <div class="calc-input-group">
+                <label class="calc-label" for="calcDielectricHeight">Dielectric Height (mils)</label>
+                <input type="number" id="calcDielectricHeight" class="calc-input" value="6" min="1" max="50" step="0.5" />
+              </div>
+              <div class="calc-input-group">
+                <label class="calc-label" for="calcEr">Dielectric Constant (εr)</label>
+                <input type="number" id="calcEr" class="calc-input" value="4.2" min="1.5" max="10" step="0.1" />
+              </div>
+              <div class="calc-input-group">
+                <label class="calc-label" for="calcCopperWeight">Copper Weight</label>
+                <select id="calcCopperWeight" class="calc-input">
+                  <option value="1.0" selected>1 oz (1.37 mils / 35 µm)</option>
+                  <option value="2.0">2 oz (2.74 mils / 70 µm)</option>
+                  <option value="0.5">0.5 oz (0.68 mils / 18 µm)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="calc-results-display">
+              <div class="result-card">
+                <span class="result-k">Impedance (Z₀)</span>
+                <span class="result-v" id="calcResultZ0">50.2 Ω</span>
+              </div>
+              <div class="result-card">
+                <span class="result-k">Propagation Delay</span>
+                <span class="result-v" id="calcResultDelay">142 ps/in</span>
+              </div>
+              <div class="result-card">
+                <span class="result-k">Max Current (ΔT 10°C)</span>
+                <span class="result-v" id="calcResultCurrent">1.46 A</span>
+              </div>
+              <div class="result-card">
+                <span class="result-k">DC Resistance</span>
+                <span class="result-v" id="calcResultResistance">49.5 mΩ/in</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento Grid: Toolchain, Lab Bench & Protocols -->
+    <section class="toolchain-section" id="toolchain">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Hardware Engineering Capabilities</span>
+          <h2 class="section-title">EDA Toolchain & Laboratory Workbench</h2>
+          <p class="section-desc">
+            Equipped with industry-standard schematic & layout software, 3D electromagnetic simulators, and precision bench instruments.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Card 1: EDA & Simulation -->
+          <div class="bento-card col-span-2">
+            <div class="bento-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+            <h3 class="bento-card-title">EDA Design & 3D SI/PI Simulation</h3>
+            <p class="bento-card-desc">
+              High-density interconnect (HDI) PCB design, blind & buried micro-vias, PDN impedance target design, eye-diagram compliance, and thermal dissipation modeling.
+            </p>
+            <div class="bench-pills-list">
+              <span class="bench-pill"><span class="dot"></span>Altium Designer 24</span>
+              <span class="bench-pill"><span class="dot"></span>Cadence Allegro & OrCAD</span>
+              <span class="bench-pill"><span class="dot"></span>KiCad 8</span>
+              <span class="bench-pill"><span class="dot gold"></span>ANSYS HFSS 3D EM</span>
+              <span class="bench-pill"><span class="dot gold"></span>ANSYS SIwave (PDN DC/AC)</span>
+              <span class="bench-pill"><span class="dot"></span>Keysight ADS</span>
+              <span class="bench-pill"><span class="dot"></span>LTspice / SPICE Modeling</span>
+              <span class="bench-pill"><span class="dot"></span>SolidWorks Electrical</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Test & Measurement Instruments -->
+          <div class="bento-card">
+            <div class="bento-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="bento-card-title">Lab Bench Test Equipment</h3>
+            <p class="bento-card-desc">Hands-on experience with GHz-range oscilloscopes, spectrum analyzers, and SMD rework stations.</p>
+            <div class="bench-pills-list">
+              <span class="bench-pill"><span class="dot green"></span>Tektronix 1GHz 4-Ch DSO</span>
+              <span class="bench-pill"><span class="dot green"></span>Rohde & Schwarz VNA</span>
+              <span class="bench-pill"><span class="dot green"></span>Rigol DSA815 Spectrum Analyzer</span>
+              <span class="bench-pill"><span class="dot"></span>Saleae Logic Pro 16</span>
+              <span class="bench-pill"><span class="dot"></span>FLIR Thermal Camera</span>
+              <span class="bench-pill"><span class="dot"></span>JBC Hot Air & Soldering Station</span>
+            </div>
+          </div>
+
+          <!-- Card 3: High-Speed Buses & Protocols -->
+          <div class="bento-card">
+            <div class="bento-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="bento-card-title">Protocols & Interfaces</h3>
+            <p class="bento-card-desc">Signal integrity compliance and jitter budgeting across multi-gigabit and industrial fieldbuses.</p>
+            <div class="bench-pills-list">
+              <span class="bench-pill"><span class="dot"></span>PCIe Gen3 / Gen4</span>
+              <span class="bench-pill"><span class="dot"></span>28Gbps SerDes PAM4</span>
+              <span class="bench-pill"><span class="dot"></span>DDR4 / DDR5 SODIMM</span>
+              <span class="bench-pill"><span class="dot"></span>10GbE SFP+ / QSFP28</span>
+              <span class="bench-pill"><span class="dot"></span>USB 3.2 Gen2 & Type-C PD</span>
+              <span class="bench-pill"><span class="dot"></span>CAN-FD & Isolated RS-485</span>
+              <span class="bench-pill"><span class="dot"></span>SPI, I2C, UART, JTAG/SWD</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Firmware & HDL -->
+          <div class="bento-card col-span-2">
+            <div class="bento-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="bento-card-title">Embedded Firmware, HDL & Python Automation</h3>
+            <p class="bento-card-desc">
+              Bridging the gap between silicon registers, FPGA logic gates, and board-level bring-up drivers. Automated test benches via PyVISA and SCPI scripts.
+            </p>
+            <div class="bench-pills-list">
+              <span class="bench-pill"><span class="dot"></span>SystemVerilog & VHDL</span>
+              <span class="bench-pill"><span class="dot"></span>AMD / Xilinx Vivado</span>
+              <span class="bench-pill"><span class="dot"></span>Bare-Metal C & C++20</span>
+              <span class="bench-pill"><span class="dot"></span>FreeRTOS & Zephyr RTOS</span>
+              <span class="bench-pill"><span class="dot gold"></span>Automated Python (PyVISA, PySerial, Scikit-RF)</span>
+              <span class="bench-pill"><span class="dot"></span>Embedded Linux (Device Trees)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Timeline -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Engineering Career Track</span>
+          <h2 class="section-title">Hardware Experience & Achievements</h2>
+          <p class="section-desc">
+            Demonstrated history of delivering high-yield, EMC-compliant hardware from prototype to production.
+          </p>
+        </div>
+
+        <div class="timeline-flow">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-content-card">
+              <div class="timeline-header-meta">
+                <h3 class="timeline-role">Senior Hardware Systems Engineer</h3>
+                <span class="timeline-date">2023 — Present</span>
+              </div>
+              <div class="timeline-company">NextGen Silicon & Compute Hardware Labs</div>
+              <ul class="timeline-bullets">
+                <li>Spearheaded design and bring-up of 14-layer PCIe Gen4 FPGA accelerator carrier boards featuring 28Gbps SerDes lanes and multi-phase PMIC power stages.</li>
+                <li>Conducted 3D full-wave electromagnetic HFSS simulations to identify and resolve differential via stub resonances, reducing insertion loss by 2.4 dB at 14 GHz.</li>
+                <li>Achieved 100% first-pass boot-up on complex BGA packages (> 1156 balls, 0.8mm pitch) with zero physical rework required.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-content-card">
+              <div class="timeline-header-meta">
+                <h3 class="timeline-role">Hardware & Power Electronics Design Engineer</h3>
+                <span class="timeline-date">2021 — 2023</span>
+              </div>
+              <div class="timeline-company">Precision Robotics & Motion Controls</div>
+              <ul class="timeline-bullets">
+                <li>Architected 48V/60A 3-phase GaN FET motor drive inverters with 200kHz PWM switching frequency, achieving 98.4% peak efficiency.</li>
+                <li>Designed ultra-low parasitic power loop PCB layouts (< 1.2 nH loop inductance) and routed 4-terminal Kelvin current shunts to suppress switching transients.</li>
+                <li>Prepared boards for FCC Part 15 Class B and CE EMC compliance testing, clearing conducted and radiated emissions with > 6 dB margin.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-content-card">
+              <div class="timeline-header-meta">
+                <h3 class="timeline-role">Embedded Hardware & Board Bring-up Engineer</h3>
+                <span class="timeline-date">2019 — 2021</span>
+              </div>
+              <div class="timeline-company">Industrial IoT Telemetry Solutions</div>
+              <ul class="timeline-bullets">
+                <li>Designed compact 4-layer and 6-layer wireless sensor nodes utilizing STM32 and nRF52 ARM Cortex MCUs with integrated LoRa and BLE.</li>
+                <li>Engineered sub-microampere power management circuits and energy-harvesting battery chargers extending remote sensor lifespans to 5+ years.</li>
+                <li>Automated manufacturing production test fixtures using Python and Raspberry Pi, cutting factory flashing and functional test time by 75%.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Terminal & Contact -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Direct Communication Bus</span>
+          <h2 class="section-title">Connect & Hardware Terminal</h2>
+          <p class="section-desc">
+            Execute commands directly in the diagnostic terminal or transmit a technical query to initiate collaboration.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Hardware CLI Shell -->
+          <div class="terminal-window" id="terminalWindow">
+            <div class="terminal-header">
+              <div class="terminal-dots" aria-hidden="true">
+                <span class="terminal-dot dot-red"></span>
+                <span class="terminal-dot dot-yellow"></span>
+                <span class="terminal-dot dot-green"></span>
+              </div>
+              <span class="terminal-title">tushar@hw-bench: /dev/ttyUSB0 (115200 8N1)</span>
+              <span></span>
+            </div>
+            <div class="terminal-body" id="termOutput">
+              <div class="term-line system">Hardware Diagnostic Shell [Firmware v2.4.0-release]</div>
+              <div class="term-line system">Type <span class="cyan">help</span> to list available commands. Try: specs, projects, telemetry.</div>
+              <div class="term-line gold">UART Session Initialized. Ready for input.</div>
+            </div>
+            <div class="term-prompt-line" style="padding: 0.75rem 1.25rem; background: #0c131f; border-top: 1px solid #233149;">
+              <span class="term-prompt">tushar@hw-bench:~$</span>
+              <input type="text" id="termInput" class="term-input" placeholder="Type 'help' and press Enter..." autocomplete="off" spellcheck="false" aria-label="Terminal Command Input" />
+            </div>
+          </div>
+
+          <!-- Contact Card & Form -->
+          <div class="contact-card">
+            <h3 style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem;">
+              Initiate Project Collaboration
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">
+              Available for high-speed hardware architecture, schematic review, SI/PI simulation consulting, and custom board development.
+            </p>
+
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label class="form-label" for="contactName">ENGINEER / CLIENT NAME</label>
+                <input type="text" id="contactName" class="form-input" placeholder="e.g. Sarah Connor" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">DIRECT EMAIL</label>
+                <input type="email" id="contactEmail" class="form-input" placeholder="s.connor@aerospace.io" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactMessage">PROJECT REQUIREMENTS & TELEMETRY</label>
+                <textarea id="contactMessage" class="form-textarea" placeholder="Detail board specs, layer count, timeline, or consultation scope..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="btnTransmitPacket" style="margin-top: 0.5rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Transmit Telemetry Packet</span>
+              </button>
+
+              <div id="formStatus" style="font-family: var(--font-mono); font-size: 0.8rem; min-height: 24px; margin-top: 0.5rem;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Deep-Dive Modal -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">✕</button>
+
+      <span class="project-category-pill" id="modalBadge" style="position: static; display: inline-block; margin-bottom: 0.75rem;">14-LAYER ENIG PCB</span>
+      <h2 id="modalTitle" style="font-family: var(--font-display); font-size: 2rem; font-weight: 800; margin-bottom: 1rem;">UltraCompute X100</h2>
+      
+      <div style="border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.5rem; aspect-ratio: 16/9; border: 1px solid var(--border-subtle);">
+        <img id="modalImage" src="assets/images/project-fpga.jpg" alt="Hardware project board photograph" style="width: 100%; height: 100%; object-fit: cover;" />
+      </div>
+
+      <p id="modalSummary" style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;"></p>
+
+      <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--trace-cyan);">
+        Electrical & Mechanical Specifications
+      </h3>
+      <div class="project-specs-list" id="modalSpecsList" style="margin-bottom: 1.75rem;"></div>
+
+      <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--copper-gold);">
+        Design Challenges & SI/PI Solutions
+      </h3>
+      <ul class="timeline-bullets" id="modalChallengesList" style="margin-bottom: 2rem;"></ul>
+
+      <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-main);">
+        Critical Bill of Materials (BOM) Breakdown
+      </h3>
+      <table class="modal-bom-table">
+        <thead>
+          <tr>
+            <th>Ref Des</th>
+            <th>Manufacturer Part Number</th>
+            <th>Description</th>
+            <th>Manufacturer</th>
+          </tr>
+        </thead>
+        <tbody id="modalBomBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-copy">
+        © 2026 Tushar Chand Gupta. Engineered with pure HTML5, Vanilla CSS, and Canvas. Hosted at <a href="https://tusharchandgupta.com" style="color: var(--trace-cyan); text-decoration: none;">tusharchandgupta.com</a>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Tusharchandgupta" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="#lab" class="footer-link">Virtual Lab</a>
+        <a href="#projects" class="footer-link">Projects</a>
+        <a href="#contact" class="footer-link">Connect</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/circuit-canvas.js"></script>
+  <script src="js/oscilloscope.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
